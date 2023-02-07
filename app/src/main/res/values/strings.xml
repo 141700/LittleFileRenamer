@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Little File Renamer</string>
+    <string name="action_preferences">Preferences</string>
+    <string name="first_fragment_label">Little File Renamer</string>
+
+    <string name="camera_switch_text">Rename Camera files</string>
+    <string name="camera_switch_key">camera_switch</string>
+    <string name="log_switch_text">Log renaming</string>
+    <string name="log_switch_key">log_switch</string>
+    <string name="start">Rename Files</string>
+
+    <string name="camera_dir_key">camera_dir</string>
+    <string name="log_dir_key">log_dir</string>
+    <string name="camera_header">Camera files</string>
+    <string name="log_header">Log</string>
+    <string name="camera_dir_title">Camera files path</string>
+    <string name="camera_dir_default">/storage/emulated/0/DCIM/Camera</string>
+    <string name="log_dir_title">Rename logs path</string>
+    <string name="log_dir_default">/storage/emulated/0/DCIM/Logs</string>
+
+</resources>

@@ -1,0 +1,26 @@
+<PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+            app:title="@string/camera_header">
+
+        <EditTextPreference
+                app:key="@string/camera_dir_key"
+                app:title="@string/camera_dir_title"
+                app:defaultValue="@string/camera_dir_default"
+                app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:title="@string/log_header">
+
+        <EditTextPreference
+                app:key="@string/log_dir_key"
+                app:title="@string/log_dir_title"
+                app:defaultValue="@string/log_dir_default"
+                app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
