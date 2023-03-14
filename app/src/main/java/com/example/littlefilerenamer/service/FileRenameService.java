@@ -4,10 +4,7 @@ import android.content.SharedPreferences;
 import android.util.Pair;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -46,6 +43,7 @@ public class FileRenameService {
         if (list != null && list.length > 0) {
             return Arrays.stream(list)
                     .filter(FileRenameService::isNeedToRename)
+                    .sorted(Comparator.comparing(File::lastModified))
                     .collect(Collectors.toList());
         }
         return new ArrayList<>();
@@ -101,7 +99,11 @@ public class FileRenameService {
     }
 
     private static boolean isNeedToRename(File file) {
-        String fileNameInitial = file.getName().substring(0, FILE_INITIAL_CHECK_INDEX);
+        String fileName = file.getName();
+        if (file.isDirectory() || fileName.length() <= FILE_INITIAL_CHECK_INDEX) {
+            return false;
+        }
+        String fileNameInitial = fileName.substring(0, FILE_INITIAL_CHECK_INDEX);
         return Arrays.stream(INITIALS_TO_RENAME).anyMatch(fileNameInitial::equalsIgnoreCase);
     }
 
