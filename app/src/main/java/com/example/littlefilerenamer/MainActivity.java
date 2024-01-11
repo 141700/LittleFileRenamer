@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
         Switch cameraSwitch = findViewById(R.id.camera_switch);
-        setSwitchPreference(R.id.camera_switch, false);
+        setSwitchPreference(R.id.camera_switch, getSharedPreferences().getBoolean(getString(R.string.camera_switch_default), true));
         Switch logSwitch = findViewById(R.id.log_switch);
-        logSwitch.setEnabled(false);
+        logSwitch.setEnabled(getSharedPreferences().getBoolean(getString(R.string.camera_switch_default), true));
         cameraSwitch.setOnCheckedChangeListener((arg0, isChecked) -> {
             setSwitchPreference(R.id.camera_switch, isChecked);
             updateLogSwitch(isChecked, logSwitch);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkAndAskFilesAccessPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
-            Uri uri = Uri.parse("package:" + BuildConfig.APPLICATION_ID);
+            Uri uri = Uri.fromParts("package", getPackageName(), null);
             startActivity(new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, uri));
         }
     }

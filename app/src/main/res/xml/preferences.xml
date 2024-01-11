@@ -1,6 +1,16 @@
 <PreferenceScreen
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory>
+
+        <SwitchPreference
+                app:key="@string/autostart_key"
+                app:title="@string/autostart_title"
+                app:defaultValue="@string/autostart_default"
+                app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
     <PreferenceCategory
             app:title="@string/camera_header">
 

@@ -2,18 +2,31 @@
     <string name="app_name">Little File Renamer</string>
     <string name="action_preferences">Preferences</string>
     <string name="first_fragment_label">Little File Renamer</string>
+    <string name="seconds_to_autostart">5</string>
+    <string name="seconds_to_autoclose">5</string>
 
     <string name="camera_switch_text">Rename Camera files</string>
     <string name="camera_switch_key">camera_switch</string>
+    <string name="camera_switch_default">true</string>
     <string name="log_switch_text">Log renaming</string>
     <string name="log_switch_key">log_switch</string>
     <string name="start">Rename Files</string>
+    <string name="autostart_button">Stop countdown</string>
+    <string name="countdown_message">" seconds to start renaming"</string>
+    <string name="renaming_started">Renaming started…</string>
+    <string name="renaming_is_off">Renaming is turned off</string>
+    <string name="closing_app">The App will automatically close soon</string>
 
+
+    <string name="autostart_key">autostart</string>
     <string name="camera_dir_key">camera_dir</string>
     <string name="log_dir_key">log_dir</string>
+    <string name="autostart_header">Auto start</string>
     <string name="camera_header">Camera files</string>
     <string name="log_header">Log</string>
+    <string name="autostart_title">Auto start</string>
     <string name="camera_dir_title">Camera files path</string>
+    <string name="autostart_default">false</string>
     <string name="camera_dir_default">/storage/emulated/0/DCIM/Camera</string>
     <string name="log_dir_title">Rename logs path</string>
     <string name="log_dir_default">/storage/emulated/0/DCIM/Logs</string>
